@@ -1,0 +1,114 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:#222;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color:#333;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.contact-details {
+    background-color: #222;
+    padding: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color:white;
+    text-align: center;
+}
+
+.contact-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+.contact-item {
+    background-color:white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background-color: #5e6c76;
+    border-radius: 50%;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.phone {
+    background-color: #4caf50;
+}
+
+.email {
+    background-color: #2196f3;
+}
+
+.address {
+    background-color: #ff9800;
+}
+
+.hours {
+    background-color: #9c27b0;
+}
+
+.instagram {
+    background-color: #e4405f; 
+}
+
+.facebook {
+    background-color: #1877f2;
+}
+
+.info {
+    flex: 1;
+}
+
+.info strong {
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+.info p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select place</title>
+    <link rel="stylesheet" href="style7.css">
+</head>
+<body>
+   
+    <nav>
+        <div class="navbar">
+            <h2>Select a place</h2>
+            <h1>   Take a look at the place you want to add in your Event </h1>
+            <div class="place-selector">
+                <select id="placeSelect" onchange="showPlaceImages()">
+                    <option value="none" selected>Select a place</option>
+                    <option value="place1">Convention hall</option>
+                    <option value="place2">Resort</option>
+                    <option value="place3">Hotel</option>
+                    <option value="place4">Beach</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+   <div class="heading">
+    <h1>Select the option and enjoy your events</h1>
+    <h3>Know about our Eva Packages</h3>
+   </div>
+    <section id="place1" class="image-container" style="display: none;">
+        <h2>Convention hall</h2>
+        <div class="image-box">
+            <img src="conve1.webp" alt="Place 1 Image 1">
+        </div>
+        <div class="image-box">
+            <img src="conve2.webp" alt="Place 1 Image 2">
+        </div>
+    </section>
+
+    <section id="place2" class="image-container" style="display: none;">
+        <h2>Resort</h2>
+        <div class="image-box">
+            <img src="resort1.jpg" alt="Place 2 Image 1">
+        </div>
+        <div class="image-box">
+            <img src="resort2.jpg" alt="Place 2 Image 2">
+        </div>
+    </section>
+
+    <section id="place3" class="image-container" style="display: none;">
+        <h2>Hotel</h2>
+        <div class="image-box">
+            <img src="hotel1.jpg" alt="Place 3 Image 1">
+        </div>
+        <div class="image-box">
+            <img src="hotel2.jpg" alt="Place 3 Image 2">
+        </div>
+    </section>
+
+    <section id="place4" class="image-container" style="display: none;">
+        <h2>Beach</h2>
+        <div class="image-box">
+            <img src="beach1.jpg" alt="Place 4 Image 1">
+        </div>
+        <div class="image-box">
+            <img src="beach2.webp" alt="Place 4 Image 2">
+        </div>
+    </section>
+
+    <!-- JavaScript to Show/Hide Places -->
+    <script>
+        function showPlaceImages() {
+            var selectedPlace = document.getElementById("placeSelect").value;
+            var places = ["place1", "place2", "place3", "place4"];
+            
+            // Hide all places
+            places.forEach(function(place) {
+                document.getElementById(place).style.display = "none";
+            });
+            
+            // Show the selected place
+            if (selectedPlace !== "none") {
+                document.getElementById(selectedPlace).style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
