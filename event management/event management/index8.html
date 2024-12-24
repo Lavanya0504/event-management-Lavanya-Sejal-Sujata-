@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select food</title>
+    <link rel="stylesheet" href="style7.css">
+</head>
+<body>
+   
+    <nav>
+        <div class="navbar">
+            <h2>Select a vibe</h2>
+            <h1>   Take a look at the vibe you want to add in your Event </h1>
+            <div class="place-selector">
+                <select id="placeSelect" onchange="showPlaceImages()">
+                    <option value="none" selected>Select a vibe</option>
+                    <option value="place1">Classical music</option>
+                    <option value="place2">Non classical dance</option>
+                    <option value="place3">Dandiya</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+   <div class="heading">
+    <h1>Select the option and enjoy your events</h1>
+    <h3>Know about our Eva Packages</h3>
+   </div>
+    <section id="place1" class="image-container" style="display: none;">
+        <h2>Classical music</h2>
+        <div class="image-box">
+            <img src="music1.jpeg" alt="Place 1 Image 1">
+        </div>
+        <div class="image-box">
+            <img src="music2.jpeg" alt="Place 1 Image 2">
+        </div>
+    </section>
+
+    <section id="place2" class="image-container" style="display: none;">
+        <h2>Non classical dance</h2>
+        <div class="image-box">
+            <img src="danc1.jpg" alt="Place 2 Image 1">
+        </div>
+        <div class="image-box">
+            <img src="danc2.webp" alt="Place 2 Image 2">
+        </div>
+    </section>
+
+    <section id="place3" class="image-container" style="display: none;">
+        <h2>Dandiya</h2>
+        <div class="image-box">
+            <img src="dandiya2.jpg" alt="Place 3 Image 1">
+        </div>
+        <div class="image-box">
+            <img src="dancing.png" alt="Place 3 Image 2">
+        </div>
+    </section>
+
+    
+
+    <!-- JavaScript to Show/Hide Places -->
+    <script>
+        function showPlaceImages() {
+            var selectedPlace = document.getElementById("placeSelect").value;
+            var places = ["place1", "place2", "place3"];
+            
+            // Hide all places
+            places.forEach(function(place) {
+                document.getElementById(place).style.display = "none";
+            });
+            
+            // Show the selected place
+            if (selectedPlace !== "none") {
+                document.getElementById(selectedPlace).style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
